@@ -172,9 +172,9 @@ body {
 }
 
 h1{
-  animation-duration: 3s;
+  animation-duration: 2.3s;
   animation-name: slidein;
-  animation-iteration-count: 2;
+  animation-iteration-count: 1;
 }
 
 
