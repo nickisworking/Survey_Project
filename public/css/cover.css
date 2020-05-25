@@ -85,8 +85,12 @@ body {
 /*
  * Header
  */
+
+ /* 네비게이션 바 붙는 현상은 수정하였지만, 페이지마다 네비게이션 바 위치가 달라짐 */
 .masthead {
   margin-bottom: 2rem;
+  width: 800px; /* 수정된 위치 (추가함)*/
+  height: 30px; /* 수정된 위치 (추가함)*/
 }
 
 .masthead-brand {
