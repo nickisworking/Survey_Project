@@ -28,6 +28,7 @@ const db = mysql.createConnection({
 
 console.log("hi");
 console.log("test");
+console.log("please");
 
 //connect
 db.connect((error)=> {
