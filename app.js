@@ -27,6 +27,7 @@ const db = mysql.createConnection({
 });
 
 console.log("hi");
+console.log("test");
 
 //connect
 db.connect((error)=> {
