@@ -26,6 +26,8 @@ const db = mysql.createConnection({
   database : 'survey'
 });
 
+console.log("hi");
+
 //connect
 db.connect((error)=> {
   if(error) {
