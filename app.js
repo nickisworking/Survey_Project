@@ -1,47 +1,43 @@
 var express = require('express');
 var app = express();
-var router = express.Router()
-const mysql = require('mysql');
-
-
-//router
-var indexRouter = require('./routes/index');
-var loginRouter = require('./routes/login');
-var createSurveyRouter = require('./routes/createsurvey');
-var myPageRouter = require('./routes/mypage');
-var signInRouter = require('./routes/signin');
-var surveyDetailRouter = require('./routes/surveydetail');
-var surveyListRouter = require('./routes/surveylist');
-
 
 app.set('view engine','ejs'); // 1
 app.use(express.static(__dirname + '/public'));
 
+//home
+app.get('/',function(req,res) {
+    res.render('home');
+})
 
-//create db connection
-const db = mysql.createConnection({
-  host : 'localhost',
-  user : 'root',
-  password : 'gmdrb918@@',
-  database : 'survey'
+//mypage
+app.get('/mypage', function(req,res){ // 2
+  res.render('mypage', {name:req.query.nameQuery});
 });
 
-//connect
-db.connect((error)=> {
-  if(error) {
-    throw error;
-    console.log("디ㅣㅂ연결실패");
-  }
-  console.log("디비 연결 완료");
-} );
+//surveylist-1
+app.get('/surveylist', function(req,res){ // 3
+  res.render('surveylist', {name:req.params.nameParam});
+});
 
-app.use('/',indexRouter);
-app.use('/mypage',myPageRouter);
-app.use('/surveylist',surveyListRouter);
-app.use('/surveylist/:nameParam',surveyDetailRouter);
-app.use('/create_survey',createSurveyRouter);
-app.use('/signin',signInRouter);
-app.use('/login',loginRouter);
+//surveylist- 상세페이지
+app.get('/surveylist/:nameParam', function(req,res){ // 3
+  res.render('surveylist', {name:req.params.nameParam});
+});
+
+//create_survey
+app.get('/create_survey', function(req,res){ // 3
+    res.render('create_survey', {name:req.params.nameParam});
+  });
+  
+//signin
+app.get('/signin', function(req,res){ // 3
+    res.render('signin', {name:req.params.nameParam});
+  });
+
+//login
+app.get('/login', function(req,res){ // 3
+    res.render('login', {name:req.params.nameParam});
+  });
 
 var port = 3000;
 app.listen(port, function(){
