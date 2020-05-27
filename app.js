@@ -24,20 +24,27 @@ app.get('/surveylist/:nameParam', function(req,res){ // 3
   res.render('surveylist', {name:req.params.nameParam});
 });
 
-//create_survey
-app.get('/create_survey', function(req,res){ // 3
-    res.render('create_survey', {name:req.params.nameParam});
-  });
-  
-//signin
-app.get('/signin', function(req,res){ // 3
-    res.render('signin', {name:req.params.nameParam});
-  });
+console.log("hi");
+console.log("test");
+console.log("please");
+console.log("??")
 
-//login
-app.get('/login', function(req,res){ // 3
-    res.render('login', {name:req.params.nameParam});
-  });
+//connect
+db.connect((error)=> {
+  if(error) {
+    throw error;
+    console.log("디ㅣㅂ연결실패");
+  }
+  console.log("디비 연결 완료");
+} );
+
+app.use('/',indexRouter);
+app.use('/mypage',myPageRouter);
+app.use('/surveylist',surveyListRouter);
+app.use('/surveylist/:nameParam',surveyDetailRouter);
+app.use('/create_survey',createSurveyRouter);
+app.use('/signin',signInRouter);
+app.use('/login',loginRouter);
 
 var port = 3000;
 app.listen(port, function(){
