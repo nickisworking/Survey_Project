@@ -1,27 +1,30 @@
 var express = require('express');
 var app = express();
+var router = express.Router()
+const mysql = require('mysql');
+
+console.log("??");
+
+//router
+var indexRouter = require('./routes/index');
+var loginRouter = require('./routes/login');
+var createSurveyRouter = require('./routes/createsurvey');
+var myPageRouter = require('./routes/mypage');
+var signInRouter = require('./routes/signin');
+var surveyDetailRouter = require('./routes/surveydetail');
+var surveyListRouter = require('./routes/surveylist');
+
 
 app.set('view engine','ejs'); // 1
 app.use(express.static(__dirname + '/public'));
 
-//home
-app.get('/',function(req,res) {
-    res.render('home');
-})
 
-//mypage
-app.get('/mypage', function(req,res){ // 2
-  res.render('mypage', {name:req.query.nameQuery});
-});
-
-//surveylist-1
-app.get('/surveylist', function(req,res){ // 3
-  res.render('surveylist', {name:req.params.nameParam});
-});
-
-//surveylist- 상세페이지
-app.get('/surveylist/:nameParam', function(req,res){ // 3
-  res.render('surveylist', {name:req.params.nameParam});
+//create db connection
+const db = mysql.createConnection({
+  host : 'localhost',
+  user : 'root',
+  password : 'wlfkf12!!',
+  database : 'survey'
 });
 
 console.log("hi");
