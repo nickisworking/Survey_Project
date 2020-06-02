@@ -1,42 +1,38 @@
 var express = require('express');
 var app = express();
+var router = express.Router()
+var bodyParser = require('body-parser');
+const mysql = require('mysql');
+
+console.log("??");
+
+//router
+var indexRouter = require('./routes/index');
+var loginRouter = require('./routes/login');
+var createSurveyRouter = require('./routes/createsurvey');
+var myPageRouter = require('./routes/mypage');
+var signInRouter = require('./routes/signin');
+var surveyDetailRouter = require('./routes/surveydetail');
+var surveyListRouter = require('./routes/surveylist');
+
 
 app.set('view engine','ejs'); // 1
 app.use(express.static(__dirname + '/public'));
+app.use(bodyParser.urlencoded({extended:true}));
 
 //home
 app.get('/',function(req,res) {
     res.render('home');
 })
 
-//mypage
-app.get('/mypage', function(req,res){ // 2
-  res.render('mypage', {name:req.query.nameQuery});
-});
+ 
+loginRouter.use(bodyParser.json());
+signInRouter.use(bodyParser.json());
 
 //surveylist-1
 app.get('/surveylist', function(req,res){ // 3
   res.render('surveylist', {name:req.params.nameParam});
 });
-
-//surveylist- 상세페이지
-app.get('/surveylist/:nameParam', function(req,res){ // 3
-  res.render('surveylist', {name:req.params.nameParam});
-});
-
-console.log("hi");
-console.log("test");
-console.log("please");
-console.log("??")
-
-//connect
-db.connect((error)=> {
-  if(error) {
-    throw error;
-    console.log("디ㅣㅂ연결실패");
-  }
-  console.log("디비 연결 완료");
-} );
 
 app.use('/',indexRouter);
 app.use('/mypage',myPageRouter);

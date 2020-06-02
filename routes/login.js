@@ -7,6 +7,9 @@ router.get('/', function(req,res){ // 3
     res.render('login');
   });
 
+
+  
+
   
 module.exports = router;
 
