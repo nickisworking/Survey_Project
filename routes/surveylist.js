@@ -4,7 +4,10 @@ var router = express.Router();
 //get homepage
 
 router.get('/', function(req,res){ // 3
-    res.render('surveylist');
+    let session = req.session;
+    res.render('surveylist', {
+      session : session
+    });
   });
   
 module.exports = router;
