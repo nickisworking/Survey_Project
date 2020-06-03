@@ -41,7 +41,7 @@ connection.connect((error)=> {
   var psw = body.psw;
 
   connection.query("SELECT *FROM user WHERE ID=?",[id],function(err,data) {
-    if(data.length != null) {
+    if(data.length > 0) {
        //비밀번호 확인하고
        if(psw === data[0].password) {
           req.session.uid = id;
