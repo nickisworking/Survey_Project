@@ -3,7 +3,18 @@ var router = express.Router();
 var alert = require('alert-node');
 const mysql = require('mysql')
 
-//db connect
+
+//get homepage
+
+router.get('/', function(req,res){ // 3
+    let session  = req.session;
+    res.render('login',{
+      session : session
+    });
+  });
+
+router.post('/join',function(req,res) {
+  //db connect
 //create db connection
 const connection= mysql.createConnection({
   host : 'localhost',
@@ -21,16 +32,6 @@ connection.connect((error)=> {
   console.log("디비 연결 완료");
 });
 
-//get homepage
-
-router.get('/', function(req,res){ // 3
-    let session  = req.session;
-    res.render('login',{
-      session : session
-    });
-  });
-
-router.post('/join',function(req,res) {
 
   let session  = req.session;
    
@@ -43,7 +44,7 @@ router.post('/join',function(req,res) {
     if(data.length != null) {
        //비밀번호 확인하고
        if(psw === data[0].password) {
-          req.session.id = id;
+          req.session.uid = id;
           console.log(session.id);
           res.redirect("/");
        }

@@ -47,14 +47,14 @@ app.use(function(req, res, next) {
 
 
 app.use(session({
-  key: 'id',
+  key: 'sid',
   secret : 'secret',
   resave : false,
   saveUninitialized : true,
   cookie : {
     maxAge : 24000*60*60
   }
-}))
+}));
 
 
 app.use('/',indexRouter);
