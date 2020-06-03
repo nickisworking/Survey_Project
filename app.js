@@ -2,6 +2,7 @@ var express = require('express');
 var app = express();
 var router = express.Router()
 var bodyParser = require('body-parser');
+var cors = require('cors')
 const mysql = require('mysql');
 
 
@@ -20,6 +21,13 @@ app.set('view engine','ejs'); // 1
 app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.urlencoded({extended:true}));
 //app.use(cookieParser());
+// cors
+const corsOptions = {
+  origin: true,
+  credentials: true
+}
+app.use(cors(corsOptions));
+
 
 const session = require('express-session');
 
@@ -45,6 +53,7 @@ app.use(function(req, res, next) {
   next();
 })
 
+app.use(express.json());
 
 app.use(session({
   key: 'sid',
