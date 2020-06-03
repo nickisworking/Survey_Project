@@ -3,11 +3,23 @@ var router = express.Router();
 var alert = require('alert-node');
 const mysql = require('mysql')
 
+
+
+
+//get homepage
+router.get('/', function(req,res){ // 3
+    session = req.session;
+    res.render('signin', {
+      session : session
+    });
+  });
+
+router.post('/join', function(req,res){
 //create db connection
 const connection= mysql.createConnection({
   host : 'localhost',
   user : 'root',
-  password : 'wlfkf12!!',
+  password : 'gmdrb918@@',
   database : 'survey'
 });
 
@@ -23,15 +35,7 @@ connection.connect((error)=> {
 
 
 
-//get homepage
-router.get('/', function(req,res){ // 3
-    session = req.session;
-    res.render('signin', {
-      session : session
-    });
-  });
 
-router.post('/join', function(req,res){
     var body = req.body;
     var email = body.email;
     var id = body.uid;
@@ -60,8 +64,6 @@ router.post('/join', function(req,res){
 
 
 })
-
-
 
 module.exports = router;
 
