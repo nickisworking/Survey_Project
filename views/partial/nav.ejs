@@ -1,6 +1,6 @@
 <div class="inner">
     <!-- <h3 class="masthead-brand">Survey Service</h3> -->
-    <nav class="nav nav-masthead justify-content-start">
+    <nav class="nav nav-masthead">
       <a class="nav-link" href="/">Survey Service</a>
       <% if(session.uid) { %>
         <a class="nav-link" href="/mypage">My Page</a>
@@ -8,8 +8,8 @@
         <a class="nav-link" href="/create_survey">Create Survey</a>
         <a class="nav-link" href="/logout">logout</a>
       <%} else {%>
-        <a class="nav-link"></a>
-        <a class="nav-link"></a>
+        <a class="nav-link" href="/surveylist" style="visibility: hidden;">Survey List</a>
+        <a class="nav-link" href="/create_survey" style="visibility: hidden;">Create Survey</a>
         <a class="nav-link" href="/signin">Sign In</a>
         <a class="nav-link" href="/login">Login</a>
       <% } %>
