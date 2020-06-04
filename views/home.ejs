@@ -7,6 +7,20 @@
   <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 
 <!-- source file-->
+    <style>
+      .mainpage {
+        margin-bottom: 150px;
+      }
+
+      .secondpage {
+        margin-top:300px;
+      }
+
+      .container {
+        margin: 200px; 
+
+      }
+    </style>
   </head>
 
   <body class="text-center">
@@ -20,26 +34,48 @@
 
   <!--가운데 메인 부분-->
   <main role="main" class="inner cover mt-500">
-      <h1 class="cover-heading animated fadeIn">Survey Service : 블록체인 기반 설문조사 플랫폼</h1>
-      <p class="lead">다른 사람의 설문을 작성하여 코인을 얻고, 나의 설문을 등록해 보세요</p>
-      <div class="container" style="text-align:center;margin:0 auto;">
+    <section class= "mainpage">
+      <h1 class="cover-heading animated fadeIn"><b style="font-size: 60px;">Survey Service</b></h1>
+      <div class="intro" >
+        <h2><br>블록체인 기반 설문조사 플랫폼</h2>
+        <p class="lead">다른 사람의 설문을 작성하여 코인을 얻고, 나의 설문을 등록해 보세요<br></p>
+      </div>
+      <div class="container;" style="text-align:center;">
       <div class = "circle_button" float:left>
           <a href= "#">Quick Survey</a>
       </div>
       <div class = "circle_button" float:left>
           <a href= "/surveylist">Survey List</a>
       </div>
-        <div class = "circle_button" float:left>
-          <a href= "/create_survey">Create Survey</a>
+      <div class = "circle_button" float:left>
+        <a href= "/create_survey">Create Survey</a>
+        </div>
+        <div class="description mb-30">
+          <h5 class="quick">Quick Survey: 현재 가장 빠르게 참여할 수 있는 설문조사를 확인하세요!</h5>
+          <h5 class="list">Survey List: 현재까지 등록되어 있는 설문조사를 확인하세요!</h5>
+          <h5 class="create">Create Survey: 필요한 설문조사지를 등록하세요!</h5>
         </div>
       </div>
+    </section>
+
+    <section class= "secondpage">
+      <h1 class="cover-heading animated fadeIn mb-300">Why Blockchain?</h1><br><br><br>
+      <div>
+        <p class="lead">
+          블록체인은 거래의 투명성과 데이터의 보안성을 보장합니다.<br><br>
+          필요한 설문조사 결과를 안전하게 저장하고, 배포할 수 있습니다. <br><br>
+          토큰을 통해 설문조사에 참여하고, 참여자들에게 보상을 전달할 수 있습니다!
+        </p>
+      </div>
+      <div class="container" style="text-align:center;">
+
   </main>  
   
   
   
 
 <!--맨 아랫부분-->
-  <footer class="mastfoot mt-auto">
+  <footer class="mastfoot mt-500">
       <div class="inner">
       <p>Prototype for <a href="https://getbootstrap.com/">survey service</a></p>
     </div>

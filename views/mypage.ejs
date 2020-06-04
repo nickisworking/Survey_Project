@@ -82,6 +82,65 @@
         text-align:start; 
       }
 
+      ul {
+         overflow: hidden;
+         display: table;
+         margin-left: 20px;
+         margin-right: 20px;
+        }
+
+      /* margin 크기에 따라 변하기 때문에, 임의적임. 정렬을 정확히 할 방법을 찾아야 함. */  
+      li { 
+        float: left;
+        margin: 26px; 
+        width: 140px; 
+        background: #fff; 
+        text-align: center; 
+      }      
+  
+      .card-img-top {
+        width: 100%;
+        height: 200px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+      }
+
+      :root {
+        --jumbotron-padding-y: 2rem;
+      }
+  
+      .jumbotron {
+        padding-top: var(--jumbotron-padding-y);
+        padding-bottom: var(--jumbotron-padding-y);
+        margin-bottom:0;
+        background-color:#fff
+      }
+  
+      @media (min-width: 768px) {
+        .jumbtron {
+          padding-top: calc(var(--jumbotron-padding-y)*2);
+          padding-bottom: calc(var(--jumbotron-padding-y)*2);
+        }
+      }
+  
+      
+      .jumbtron p:last-child {
+        margin-bottom: 0;
+      }
+  
+      .jumbtron-heading {
+        font-weight: 300;
+        color: black;
+      }
+  
+      .jumbtron .container {
+        
+        max-width: 40rem;
+      }
+  
+      .box-shadow {box-shadow: .25rem .75rem rgba(0,0,0,.05);}
+
 
       /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
       @media screen and (max-width: 700px) {
@@ -134,14 +193,75 @@
         <div>
           
         </div>
-        <div class="box">Survey 1</div> 
-        <div class="box">Survey 2</div>
-        <div class="box">Survey 3</div>
+        <ul>
+          <li>
+            <div class="row">
+              <div clss="col-md-4">
+                <div class="card mb-4 box-shadow">
+                  <img class="card-img-top" data-src="/" alt="이미지 준비중">
+                  <div class="card-body">                    
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="btn-group">                        
+                        <button type="button" class="btn btn-sm btn-outline-secondary">결과보기</button>
+                      </div>            
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+           
+          <li>    
+            <div class="row">
+              <div clss="col-md-4">
+                <div class="card mb-4 box-shadow">
+                  <img class="card-img-top" data-src="/" alt="이미지 준비중">
+                  <div class="card-body">                    
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="btn-group">                        
+                        <button type="button" class="btn btn-sm btn-outline-secondary">결과보기</button>
+                      </div>                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
 
-        
-        <div class="fakeimg" style="height:200px;">Image</div>
-        <p>Some text..</p>
-        <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+          <li>
+            <div class="row">
+              <div clss="col-md-4">
+                <div class="card mb-4 box-shadow">
+                  <img class="card-img-top" data-src="/" alt="이미지 준비중">
+                  <div class="card-body">                    
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="btn-group">                        
+                        <button type="button" class="btn btn-sm btn-outline-secondary">결과보기</button>
+                      </div>                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>   
+
+          <li>
+            <div class="row">
+              <div clss="col-md-4">
+                <div class="card mb-4 box-shadow">
+                  <img class="card-img-top" data-src="/" alt="이미지 준비중">
+                  <div class="card-body">                    
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="btn-group">                        
+                        <button type="button" class="btn btn-sm btn-outline-secondary">결과보기</button>
+                      </div>            
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul> 
    
       </div>
     </div>
