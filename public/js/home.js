@@ -412,5 +412,6 @@ if(typeof web3 === 'undefined') {
 })
 } else {
     console.log("Metamask가 설치되어있습니다.")
-    ethereum.enable();
+	ethereum.enable();
+
 }

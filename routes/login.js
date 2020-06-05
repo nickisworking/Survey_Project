@@ -42,7 +42,10 @@ connection.connect((error)=> {
        //비밀번호 확인하고
        if(psw === data[0].password) {
           req.session.uid = id;
-          console.log(session.id);
+          req.session.uname = data[0].uname;
+          req.session.email = data[0].email;
+          req.session.address = data[0].address;
+          console.log(session.uid);
           res.redirect("/");
        } else {
         alert("Password does not match"); 

@@ -1,8 +1,4 @@
 console.log("hi")
-
-
-
-
 if (typeof web3 !== 'undefined') {
     console.log('sign in 페이지 Metamask가 설치되어 있습니다.')
 	ethereum.enable();

@@ -3,8 +3,6 @@ var router = express.Router();
 var alert = require('alert-node');
 const mysql = require('mysql')
 
-
-
 //get homepage
 router.get('/', function(req,res){ // 3
     session = req.session;
@@ -37,6 +35,7 @@ connection.connect((error)=> {
     var name = body.uname;
     var passwd = body.psw;
     var passwd_rep = body.psw_repeat;
+    var address = body.address
 
     connection.query("SELECT *FROM user WHERE ID=?",[id],function(err,data) {
         if(data.length == 0) {
@@ -45,7 +44,7 @@ connection.connect((error)=> {
           }
           else{
           console.log(passwd);
-          var query = connection.query('insert into user (id,email, password, uname) values ("' + id + '","' + email + '","' + passwd + '","' + name + '")', function(err, rows) {
+          var query = connection.query('insert into user (id,email, password, uname,address) values ("' + id + '","' + email + '","' + passwd + '","' + name +'","'+address+ '")', function(err, rows) {
               if(err) { throw err;}
               console.log("Data inserted!");
               res.render('home')

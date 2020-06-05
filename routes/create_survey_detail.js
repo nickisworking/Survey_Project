@@ -43,7 +43,7 @@ router.post('/create', function(req,res){ // 3
   console.log(t);
 
 
-  var query = connection.query('insert into survey_list (title,text, userid) values ("' +t + '",' + "'"+ target +"'"+',"'  + session.id + '")', function(err, rows) {
+  var query = connection.query('insert into survey_list (title,text, userid) values ("' +t + '",' + "'"+ target +"'"+',"'  + session.uid + '")', function(err, rows) {
     if(err) { throw err;}
     console.log("Data inserted!");
 })
