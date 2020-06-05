@@ -66,7 +66,7 @@ body {
   background-image: url('background_image.jpg');
   background-repeat:none;
   background-size: cover;
-  background-color: white;
+  
 }
 /* 여기를 수정해야 body 태그 layout을 수정할 수 있을 듯 */
 body {
