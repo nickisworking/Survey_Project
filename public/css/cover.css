@@ -161,16 +161,17 @@ body {
   width : 210px;
   height : 210px;
   border-radius: 50%;
-  background-color: black;
+  background-color: rgb(40, 82, 95);
   font-size: 26px;
   text-align: center;
   line-height : 210px;
   color: white;
-  opacity: 0.5;
+  opacity: 0.8;
   margin-top : 100px;
   margin-bottom : 120px;
   margin-right: 40px;
   margin-left: 40px;
+  box-shadow: black;
   float:left;
   display:inline-block;
 }
@@ -187,10 +188,10 @@ body {
   }
 }
 
-h1{
-  animation-duration: 3s;
-  animation-name: slidein;
-  animation-iteration-count: 1;
-}
+  h1{
+    animation-duration: 3s;
+    animation-name: slidein;
+    animation-iteration-count: 1;
+  }
 
 
