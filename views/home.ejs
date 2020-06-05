@@ -30,9 +30,9 @@
       }
 
       .secondpage {    
-        border: 3px solid ;    
-        padding-top: 50px; 
-        padding-bottom: 50px;
+        border: 5px solid ;    
+        padding-top: 100px; 
+        padding-bottom: 100px;
         margin-top:0;
       }
 
@@ -42,7 +42,7 @@
         margin-top: 150px;
         margin-bottom: 100px;
         background-color: white;
-        border: 3px solid;
+        border: 5px solid;
         color: black;
       }
 
@@ -65,7 +65,7 @@
         font-weight: 500; 
         animation:none;       
       }
-
+      /*
       .Bae {
         margin-top: 50px;   
         text-align: left; 
@@ -78,19 +78,51 @@
         text-align: left;
         font-size: 25px;        
       }
-
+      */
       img {
-       
-        margin-left: 5%;
-        margin-right: 5%;
+        margin-bottom: 5%;
+        margin-left: 10%;
+        margin-right: 10%;
         width: 200px;
         height: 200px;
         border: 2px solid black;
         border-radius: 50%;
         text-align:left;
-        vertical-align: 30;
+        vertical-align: 30;        
+      }
+
+      .intro-name {
+        margin-left: 15%;
+        margin-right: 15%;
+        font-size: 30px;
+        font-weight: 600;
+      }
+
+      .intro-role {
+        margin-top: 30px;
+        margin-left: 78px;
+        margin-right: 80px;
+        font-size: 25px;
+        font-weight: 530;
+      }
+
+      .intro-major {
+        margin-top: 30px;
+        margin-left: 35px;
+        margin-right: 65px;
+        font-size: 25px;
+        font-weight: 530;
+      }
+
+      .intro-team {
+        margin-top: 30px;
+        margin-left: 100px;
+        margin-right: 35px;
+        font-size: 25px;
+        font-weight: 530;
         
       }
+      
 
     </style>
   </head>
@@ -120,16 +152,16 @@
             <div class = "circle_button" float:left>
               <a href= "/create_survey" style="color:white;"><b>Create Survey</b></a>
             </div>          
-            <div class="description mb-30">
-              <h5 class="quick">Quick Survey: 현재 가장 빠르게 참여할 수 있는 설문조사를 확인하세요!</h5>
-              <h5 class="list">Survey List: 현재까지 등록되어 있는 설문조사를 확인하세요!</h5>
-              <h5 class="create">Create Survey: 필요한 설문조사지를 등록하세요!</h5>
+            <div class="description mb-30"><b>
+              <h4 class="quick">Quick Survey: 현재 가장 빠르게 참여할 수 있는 설문조사를 확인하세요!</h4>
+              <h4 class="list">Survey List: 현재까지 등록되어 있는 설문조사를 확인하세요!</h4>
+              <h4 class="create">Create Survey: 필요한 설문조사지를 등록하세요!</h4></b>
             </div>
           </div>
         </section>
 
         <section class= "secondpage" style="color:black;">
-          <p class="cover-heading mb-300" style="font-size: 40px; font-weight:700;">Why Blockchain?</p><br><br>
+          <p class="cover-heading mb-300" style="font-size: 40px; font-weight:700;">Why Blockchain?</p><br><br><br>
           <div style="margin-bottom: 40px;"> 
             <p class="lead1">
               블록체인은 거래의 투명성과 데이터의 보안성을 보장합니다.<br><br>
@@ -142,11 +174,23 @@
         <section class="thirdpage">
           <div class="developer"> Developer </div>
             <div class="deimg">
-              <div class="Bae">
-                <img src="/css/Bae.jpg" alt="준비중"><span style="font-weight:500">배준호</span>: Back-end Developer 
+              
+              <img src="/css/Bae.jpg" alt="준비중" class="Bimg">           
+              <img src="/css/Shin.jpg" alt="준비중" class="Simg">
+              <div class="intro">
+                <span class="intro-name">배준호</span> 
+                <span class="intro-name">신민승</span>
               </div>
-              <div class="Shin">  
-                <img src="/css/Shin.jpg" alt="준비중"><span class="stle">신민승</span>: Front-end Developer
+              <div class="intro">
+                <span class="intro-role">Back-End Developer</span> 
+                <span class="intro-role">Front-End Developer</span>
+              </div>
+              <div class="intro">
+                <span class="intro-major">중어중문학과 / 컴퓨터공학과</span> 
+                <span class="intro-major">스포츠과학과 / 통계학과</span>
+                <div class="intro">
+                  <span class="intro-team">Skkrypto: 개발팀 </span> 
+                  <span class="intro-team">Skkrypto: 기획팀 / 개발기초팀</span>
               </div>
             </div>
          
