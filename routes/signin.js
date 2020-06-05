@@ -5,7 +5,6 @@ const mysql = require('mysql')
 
 
 
-
 //get homepage
 router.get('/', function(req,res){ // 3
     session = req.session;
@@ -19,7 +18,7 @@ router.post('/join', function(req,res){
 const connection= mysql.createConnection({
   host : 'localhost',
   user : 'root',
-  password : 'wlfkf12!!',
+  password : 'gmdrb918@@',
   database : 'survey'
 });
 
@@ -31,10 +30,6 @@ connection.connect((error)=> {
   }
   console.log("디비 연결 완료");
 });
-
-
-
-
 
     var body = req.body;
     var email = body.email;

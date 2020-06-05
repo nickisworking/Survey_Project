@@ -18,7 +18,7 @@ router.post('/join',function(req,res) {
 const connection= mysql.createConnection({
   host : 'localhost',
   user : 'root',
-  password : 'wlfkf12!!',
+  password : 'gmdrb918@@',
   database : 'survey'
 });
 

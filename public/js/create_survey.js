@@ -20,9 +20,25 @@ creator.rightContainerActiveItem("toolbox");
 // DB Connect
 //DB에 저장하는 부분
 creator.saveSurveyFunc = function () {
+
     //save the survey JSON
     console.log(creator.text);
-    window.location.href = 'http://localhost:3000/create_survey_detail/create'
+    $.ajax({
+        url:"create_survey_detail/create",
+        type:'POST',
+        dataType : 'text',
+        contentType : 'application/json',
+        data: creator.text,
+        success:function(data){
+            console.log("제발")
+            window.location.href = "/"
+        },
+        error:function(jqXHR, textStatus, errorThrown){
+            alert("에러 발생" + textStatus + " : " + errorThrown);
+            self.close();
+        }
+    });
 }
+
 
 //creator.text = "{ pages: [{ name:\'page1\', questions: [{ type: \'text\', name:\"q1\"}]}]}";

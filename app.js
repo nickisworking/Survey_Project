@@ -41,9 +41,10 @@ const corsOptions = {
   credentials: true
 }
 
-
 app.set('view engine','ejs'); // 1
+
 app.use(express.static(__dirname + '/public'));
+
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(cors(corsOptions));
 app.use(express.json());

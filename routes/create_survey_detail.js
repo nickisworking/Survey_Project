@@ -12,9 +12,8 @@ router.get('/', function(req,res){ // 3
   });
 
 
-router.get('/create:id', function(req,res){ // 3
+router.post('/create', function(req,res){ // 3
   let session = req.session;
-  
   //db
   const connection= mysql.createConnection({
     host : 'localhost',
@@ -31,12 +30,27 @@ router.get('/create:id', function(req,res){ // 3
     console.log("디비 연결 완료");
   });
 
-  console.log(request.creator.text);
+  //console.log(req.creator.text);
+  console.log("바디 찍혔으면 좋겠다.")
+  console.log(req.body);
 
-  res.render('home', {
-      session: session
-    });
-  });
+  var target = JSON.stringify(req.body);
+
+  var t_prev = JSON.stringify(req.body);
+  var t_prprev = JSON.parse(t_prev);
+
+  var t = t_prprev["pages"][0]["title"];
+  console.log(t);
+
+
+  var query = connection.query('insert into survey_list (title,text, userid) values ("' +t + '",' + "'"+ target +"'"+',"'  + session.id + '")', function(err, rows) {
+    if(err) { throw err;}
+    console.log("Data inserted!");
+})
+
+res.redirect('http://localhost:3000/');
+
+});
 
 module.exports = router;
 
