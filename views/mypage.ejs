@@ -5,6 +5,10 @@
 
     <style>
       /* Column container */
+      h1 {
+        animation: none;
+      }
+
       .row {  
         display: flex;
         flex-wrap: wrap;
@@ -36,7 +40,7 @@
         height: 200px;
         width: 200px;
         line-height: 200px;
-        background-color: #e4dede;       
+        background-color: #f0e9e9;       
         display:inline-block;
         margin-bottom: 15px;
         margin-left:30px;
@@ -44,14 +48,14 @@
 
       /* Fake image, just for this example */
       .fakeimg {
-        background-color: #e4dede;
+        background-color: #9e9393;
         width: 100%;
         padding: 20px;
-      }
+      } 
 
       .uname {
-        background-color: #e4dede;
-        border-left: 10px solid #b2b4b2;
+        background-color: #eeeeee;  
+        border-left: 10px solid #c0c0c0;
         margin-bottom: 15px;
         padding: 12px 24px;
         text-align:start;
@@ -59,24 +63,24 @@
       }
 
       .uid {
-        background-color: #e4dede;
-        border-left: 10px solid #b2b4b2;
+        background-color: #eeeeee;
+        border-left: 10px solid #c0c0c0;
         margin-bottom: 15px;
         padding: 12px 24px;
         text-align:start; 
       }
 
       .email {
-        background-color: #e4dede;
-        border-left: 10px solid #b2b4b2;
+        background-color: #eeeeee;
+        border-left: 10px solid #c0c0c0;
         margin-bottom: 15px;
         padding: 12px 24px;
         text-align:start; 
       }
 
       .address {
-        background-color: #e4dede;
-        border-left: 10px solid #b2b4b2;
+        background-color: #eeeeee; 
+        border-left: 10px solid #c0c0c0;
         margin-bottom: 15px;
         padding: 12px 24px;
         text-align:start; 
@@ -85,8 +89,9 @@
       ul {
          overflow: hidden;
          display: table;
-         margin-left: 20px;
-         margin-right: 20px;
+         margin-left: 50px;
+         padding:0;
+         
         }
 
       /* margin 크기에 따라 변하기 때문에, 임의적임. 정렬을 정확히 할 방법을 찾아야 함. */  
@@ -123,8 +128,7 @@
           padding-bottom: calc(var(--jumbotron-padding-y)*2);
         }
       }
-  
-      
+    
       .jumbtron p:last-child {
         margin-bottom: 0;
       }
@@ -140,6 +144,22 @@
       }
   
       .box-shadow {box-shadow: .25rem .75rem rgba(0,0,0,.05);}
+
+      .Info {
+        font-size: 20px;
+        font-weight: 700;
+        color: rgb(73, 71, 71);
+        
+      }
+
+      span.text{
+        text-align:right;
+        font-size: 18px;  
+        color:rgb(73,71,71);
+      }
+      
+      
+
 
 
       /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
@@ -165,42 +185,51 @@
   <main role="main" class="inner cover">
     <div class="row">
       <div class="side">
-        <h1 class="my_info mb-3">My Page</h1>
-        <p style="color:rgb(73, 71, 71)">나의 정보와 설문 참여 기록을 확인하세요.</p>  
+        <h1 class="my_info mb-3"><b>My Page</b></h1>
+        <p style="color:rgb(73,71,71); font-size: 20px;">내 정보와 설문 참여 기록을 확인하세요.</p>  
         
                    
        </div>
       <div class="main">
-        <h2 class="my_info mb-5" style="text-align: start; ">내 정보</h2>
+        <h2 class="my_info mb-3" style="text-align: start; "><b>내 정보</b></h2><br>
+        <p style="color:rgb(73, 71, 71);  font-style: oblique;">현재 보유하고 있는 코인은 메타마스크를 통해 확인할 수 있습니다!</p>
       
           <div class="uname">
-            <p><strong>User Name</strong> Some text...</p>
+            <p style="margin-bottom: 8px; margin-top: 8px;">
+              <span class="Info">User Name</span>
+              <span class="text" style="margin-left: 30px;">Some text...</span></p>
           </div>
 
           <div class="uid">
-            <p><strong>User Id</strong> Some text...</p>
+            <p style="margin-bottom: 8px; margin-top: 8px;">
+              <span class="Info">User Id</span>
+              <span class="text" style="margin-left: 68px;">Some text...</span></p>
           </div>
           
           <div class="email">
-            <p><strong>Email</strong> Some text...</p>
+            <p style="margin-bottom: 8px; margin-top: 8px;">
+              <span class="Info">Email</span> 
+              <span class="text" style="margin-left: 83.2px;">Some text...</span></p>
           </div>
           
           <div class="address">
-            <p><strong>Address</strong> Some text...</p>
+            <p style="margin-bottom: 8px; margin-top: 8px;">
+              <span class="Info">Address</span>
+              <span class="text" style="margin-left: 59.1px;">Some text...</span></p>
           </div>         
 
-          <h2 class="my_survey mt-5 mb-5" style="text-align: start; color:black;">내 설문기록</h2>
+          <h2 class="my_survey mt-5 mb-5" style="text-align: start; color:black;"><b>내 설문기록</b></h2>
         <div>
           
         </div>
         <ul>
           <li>
-            <div class="row">
+            <div class="drow">
               <div clss="col-md-4">
                 <div class="card mb-4 box-shadow">
                   <img class="card-img-top" data-src="/" alt="이미지 준비중">
                   <div class="card-body">                    
-                    <div class="d-flex justify-content-between align-items-center">
+                    <div class="d-flex justify-content-between align-items-center" style= "margin-left: 12.5px;">
                       <div class="btn-group">                        
                         <button type="button" class="btn btn-sm btn-outline-secondary">결과보기</button>
                       </div>            
@@ -210,14 +239,14 @@
               </div>
             </div>
           </li>
-           
+          
           <li>    
-            <div class="row">
+            <div class="drow">
               <div clss="col-md-4">
                 <div class="card mb-4 box-shadow">
                   <img class="card-img-top" data-src="/" alt="이미지 준비중">
                   <div class="card-body">                    
-                    <div class="d-flex justify-content-between align-items-center">
+                    <div class="d-flex justify-content-between align-items-center" style= "margin-left: 12.5px;">
                       <div class="btn-group">                        
                         <button type="button" class="btn btn-sm btn-outline-secondary">결과보기</button>
                       </div>                      
@@ -229,12 +258,12 @@
           </li>
 
           <li>
-            <div class="row">
+            <div class="drow">
               <div clss="col-md-4">
                 <div class="card mb-4 box-shadow">
                   <img class="card-img-top" data-src="/" alt="이미지 준비중">
                   <div class="card-body">                    
-                    <div class="d-flex justify-content-between align-items-center">
+                    <div class="d-flex justify-content-between align-items-center" style= "margin-left: 12.5px;">
                       <div class="btn-group">                        
                         <button type="button" class="btn btn-sm btn-outline-secondary">결과보기</button>
                       </div>                      
@@ -246,12 +275,12 @@
           </li>   
 
           <li>
-            <div class="row">
+            <div class="drow">
               <div clss="col-md-4">
                 <div class="card mb-4 box-shadow">
                   <img class="card-img-top" data-src="/" alt="이미지 준비중">
                   <div class="card-body">                    
-                    <div class="d-flex justify-content-between align-items-center">
+                    <div class="d-flex justify-content-between align-items-center" style= "margin-left: 12.5px;">
                       <div class="btn-group">                        
                         <button type="button" class="btn btn-sm btn-outline-secondary">결과보기</button>
                       </div>            
@@ -269,9 +298,9 @@
   <!--가운데 메인 부분 끝-->
 
 <!--맨 아랫부분-->
-  <footer class="mastfoot mt-auto">
+  <footer class="mastfoot mt-100">
       <div class="inner">
-      <p>Prototype for <a href="https://getbootstrap.com/">testing중입니다.</a></p>
+      <p>Prototype for <a href="">Survey Service.</a></p>
     </div>
   </footer>
 </div>
