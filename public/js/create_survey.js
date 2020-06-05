@@ -2,6 +2,8 @@ SurveyCreator
 .StylesManager
 .applyTheme("bootstrap");
 
+console.log("create_survey_detail page loaded")
+
 // Show Designer, Test Survey, JSON Editor and additionaly Logic tabs
 var options = {
 showLogicTab: true
