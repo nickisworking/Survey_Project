@@ -403,7 +403,7 @@ const listABI = [
 	}
 ]
 
-console.log("why?");
+
 if(typeof web3 === 'undefined') {
     $(function () {
     console.log("here");

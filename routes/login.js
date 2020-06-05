@@ -3,7 +3,6 @@ var router = express.Router();
 var alert = require('alert-node');
 const mysql = require('mysql')
 
-
 //get homepage
 
 router.get('/', function(req,res){ // 3
@@ -34,8 +33,6 @@ connection.connect((error)=> {
 
 
   let session  = req.session;
-   
-  
   let body = req.body;
   var id = body.UID;
   var psw = body.psw;
@@ -47,6 +44,9 @@ connection.connect((error)=> {
           req.session.uid = id;
           console.log(session.id);
           res.redirect("/");
+       } else {
+        alert("Password does not match"); 
+        res.redirect('/login');
        }
        //로그인하기      
     }

@@ -1,6 +1,8 @@
 var express = require('express');
 var router = express.Router();
 
+const mysql = require('mysql');
+
 //get homepage
 router.get('/', function(req,res){ // 3
     let session = req.session;
@@ -9,5 +11,37 @@ router.get('/', function(req,res){ // 3
     });
   });
 
+
+router.get('/create:id', function(req,res){ // 3
+  let session = req.session;
+  
+  //db
+  const connection= mysql.createConnection({
+    host : 'localhost',
+    user : 'root',
+    password : 'gmdrb918@@',
+    database : 'survey'
+  });
+  //connect
+  connection.connect((error)=> {
+    if(error) {
+      throw error;
+      console.log("디ㅣㅂ연결실패");
+    }
+    console.log("디비 연결 완료");
+  });
+
+  console.log(request.creator.text);
+
+  res.render('home', {
+      session: session
+    });
+  });
+
 module.exports = router;
+
+
+
+
+
 

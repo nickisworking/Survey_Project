@@ -5,6 +5,24 @@ var bodyParser = require('body-parser');
 var cors = require('cors')
 const mysql = require('mysql');
 
+
+//db
+const connection= mysql.createConnection({
+  host : 'localhost',
+  user : 'root',
+  password : 'gmdrb918@@',
+  database : 'survey'
+});
+
+//connect
+connection.connect((error)=> {
+  if(error) {
+    throw error;
+    console.log("디ㅣㅂ연결실패");
+  }
+  console.log("디비 연결 완료");
+});
+
 //router
 var indexRouter = require('./routes/index');
 var loginRouter = require('./routes/login');
