@@ -66,7 +66,7 @@ body {
   background-image: url('background_image.jpg');
   background-repeat:none;
   background-size: cover;
-  background-color: white;
+  
 }
 /* 여기를 수정해야 body 태그 layout을 수정할 수 있을 듯 */
 body {
@@ -89,7 +89,7 @@ body {
  /* 네비게이션 바 붙는 현상은 수정하였지만, 페이지마다 네비게이션 바 위치가 달라짐 */
 
 .masthead {  
-  margin-bottom: 100px;
+  margin-bottom: 50px;
   width: 1000px; /* 수정된 위치 (추가함)*/
   height: 200px; /* 수정된 위치 (추가함)*/
 }
@@ -161,12 +161,12 @@ body {
   width : 210px;
   height : 210px;
   border-radius: 50%;
-  background-color: rgb(227, 252, 255);
+  background-color: rgb(19, 20, 20);
   font-size: 26px;
   text-align: center;
   line-height : 210px;
   font-style: oblique;
-  opacity: 0.35;
+  opacity: 0.6;
   margin-top : 100px;
   margin-bottom : 120px;
   margin-right: 40px;
