@@ -50,7 +50,7 @@ a:hover {
 .btn-secondary,
 .btn-secondary:hover,
 .btn-secondary:focus {
-  color: #333388;
+  color: #d6d6e4;
   text-shadow: none; /* Prevent inheritance from `body` */
   background-color: #fff;
   border: .05rem solid #fff;
@@ -161,18 +161,17 @@ body {
   width : 210px;
   height : 210px;
   border-radius: 50%;
-  background-color: rgb(40, 82, 95);
+  background-color: rgb(227, 252, 255);
   font-size: 26px;
   text-align: center;
   line-height : 210px;
-  color: white;
-  opacity: 0.8;
+  font-style: oblique;
+  opacity: 0.35;
   margin-top : 100px;
   margin-bottom : 120px;
   margin-right: 40px;
   margin-left: 40px;
-  box-shadow: black;
-  float:left;
+  
   display:inline-block;
 }
 
