@@ -9,13 +9,13 @@
 
    **1) node js**
 
-   **2) express**
+   **2) framework : express**
 
-   **3) mysql**
+   **3) database : mysql**
 
-   **4) ejs**
+   **4) view engine : ejs**
 
-   **5) web3**
+   **5) web3.js**
 
 2.  Mysql **로컬 데이터 베이스**는 다음과 같습니다. 프로그램을 실행하기 위해서는 로컬 데이터베이스를 구성해야 합니다.
 
@@ -24,6 +24,8 @@
    ![image-20200728013505480](C:\Users\BaeJunho\AppData\Roaming\Typora\typora-user-images\image-20200728013505480.png)
 
 3. Ethereum 기반 **BetrayToken 스마트컨트랙트**는 Contract 폴더에서 확인할 수 있습니다.
+
+4. 포트는 **localhost:3000**을 이용합니다.
 
 ## 사용 방법
 
