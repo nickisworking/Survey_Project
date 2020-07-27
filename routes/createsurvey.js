@@ -17,8 +17,5 @@ router.get('/create_survey_detail', function(req,res){ // 3
     });
   });
  
-
-  
-  
 module.exports = router;
 

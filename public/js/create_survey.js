@@ -31,7 +31,7 @@ creator.saveSurveyFunc = function () {
         data: creator.text,
         success:function(data){
             console.log("제발")
-            window.location.href = "/"
+            window.location.href = "http://localhost:3000/"
         },
         error:function(jqXHR, textStatus, errorThrown){
             alert("에러 발생" + textStatus + " : " + errorThrown);
